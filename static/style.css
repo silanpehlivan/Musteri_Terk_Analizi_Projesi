@@ -1,0 +1,184 @@
+/* === GENEL ARKA PLAN === */
+body {
+    background: linear-gradient(135deg, #ede9fe, #dbeafe); /* Pastel mor-mavi */
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #1e293b;
+}
+
+/* === SAYFA BAŞLIĞI === */
+h1 {
+    font-size: 38px;
+    font-weight: 800;
+    color: #604a84; /* İkonla uyumlu mor */
+    text-align: center;
+    margin-top: 25px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 18px;
+    color: #334155;
+    margin-bottom: 30px;
+}
+
+/* === ANA KARTLAR === */
+.card {
+    background: rgba(255, 255, 255, 0.90);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+
+    /* Dengeli soft gölge */
+    box-shadow:
+        0 6px 14px rgba(0, 0, 0, 0.06),
+        0 1px 3px rgba(0, 0, 0, 0.04);
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* === Hover — yumuşak kalkma === */
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.10),
+        0 3px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Risk text styles */
+.risk-low { color: #1e7e34; font-weight:700; }
+.risk-medium { color: #856404; font-weight:700; }
+.risk-high { color: #b02a37; font-weight:700; }
+
+/* Risk card backgrounds */
+.risk-low + .h4, .risk-low { }
+.risk-medium + .h4, .risk-medium { }
+.risk-high + .h4, .risk-high { }
+
+/* Subtle colored top borders to highlight risk cards */
+.card.risk-low { border-top: 4px solid rgba(16,185,129,0.18); }
+.card.risk-medium { border-top: 4px solid rgba(245,158,11,0.18); }
+.card.risk-high { border-top: 4px solid rgba(220,38,38,0.18); }
+
+/* Used-model badge styles */
+.used-badge {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-weight: 700;
+    color: #064e3b;
+    background: rgba(16,185,129,0.10);
+    border: 1px solid rgba(16,185,129,0.15);
+}
+.used-badge.used-warning {
+    color: #92400e;
+    background: rgba(245,158,11,0.07);
+    border: 1px solid rgba(245,158,11,0.12);
+}
+.used-badge.used-high {
+    color: #7f1d1d;
+    background: rgba(220,38,38,0.06);
+    border: 1px solid rgba(220,38,38,0.12);
+}
+
+/* === Kart Başlığı === */
+.card-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1e3a8a; /* Premium mavi */
+    margin-bottom: 15px;
+}
+
+/* === FORM ELEMANLARI === */
+input, select {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 15px;
+    border-radius: 10px;
+    border: 1px solid #cbd5e1;
+    background: #ffffff;
+    transition: 0.2s;
+}
+
+input:focus, select:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+    outline: none;
+}
+
+/* === BUTON === */
+button, .btn-primary {
+    background: linear-gradient(135deg, #2563eb, #1e40af); /* Soft blue */
+    color: white !important;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.25s ease;
+    box-shadow: 0 6px 14px rgba(37, 99, 235, 0.25);
+}
+
+button:hover, .btn-primary:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #1d4ed8, #1e3a8a);
+    box-shadow: 0 8px 18px rgba(37, 99, 235, 0.35);
+}
+
+button:active, .btn-primary:active {
+    transform: translateY(0px);
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+}
+
+/* === TAHMİN SONUCU === */
+#result {
+    padding: 18px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;  /* Orta kalınlık */
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: 0.25s ease;
+}
+
+/* Düşük Risk */
+.result-low {
+    background: #d1fae5;
+    border-left: 6px solid #10b981;
+    color: #065f46;
+}
+
+/* Yüksek Risk */
+.result-high {
+    background: #fee2e2;
+    border-left: 6px solid #dc2626;
+    color: #7f1d1d;
+}
+
+/* === GRAFİK KONTEYNER === */
+.chart-container {
+    margin-top: 25px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 22px;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 992px) {
+    .card {
+        margin-bottom: 25px;
+    }
+}
+
+
+
+
+
+
+
+
