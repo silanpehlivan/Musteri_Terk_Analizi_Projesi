@@ -41,14 +41,14 @@ Tahmin: Seçilen modelin ürettiği olasılık %60 (0.60) eşiğini aşarsa "Yü
 🚀 Kurulum ve Çalıştırma
 PowerShell
 
-# 1. Sanal Ortam Oluşturma
+1. Sanal Ortam Oluşturma
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 
-# 2. Bağımlılıkları Yükleme
+2. Bağımlılıkları Yükleme
 pip install -r requirements.txt
 
-# 3. Uygulamayı Başlatma
+3.Uygulamayı çalıştırma
 flask run
 Tarayıcıda http://127.0.0.1:5000 adresinden panele ulaşabilirsiniz.
 
