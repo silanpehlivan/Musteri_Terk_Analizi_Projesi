@@ -48,7 +48,7 @@ python -m venv .venv
 2. Bağımlılıkları Yükleme: 
 pip install -r requirements.txt
 
-3.Uygulamayı çalıştırma: 
+3. Uygulamayı çalıştırma: 
 flask run
 Tarayıcıda http://127.0.0.1:5000 adresinden panele ulaşabilirsiniz.
 
