@@ -91,3 +91,11 @@ http://127.0.0.1:5000
 - **MLflow Entegrasyonu:** Model deneylerini daha sistematik takip etmek.
 
 - **Dinamik Eşikler:** Risk iştahına göre eşik değerini UI üzerinden ayarlama özelliği.
+
+## 📜 Lisans
+
+Bu proje **MIT License** ile lisanslanmıştır. Detaylı bilgi için `LICENSE` dosyasını inceleyebilirsiniz.
+
+## 👩‍💻 Geliştirici
+
+**Şilan Pehlivan**
