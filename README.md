@@ -25,6 +25,42 @@ Telekomünikasyon müşteri verilerinden terk olasılığını tahmin eden, mode
 
 Python · Flask · LightGBM · Keras
 
+## Teknik yaklaşım
+
+Sayısal ölçekleme ve kategorik one-hot dönüşümü sonrası LightGBM ve derin ağ olasılıkları bir meta modele aktarılır. Ayrı eğitim betikleri farklı ensemble yaklaşımlarını incelemeye imkân verir.
+
+```mermaid
+flowchart LR
+A[Müşteri verisi] --> B[Ön işleme]
+B --> C[LightGBM ve derin ağ]
+C --> D[Meta model]
+D --> E[Terk riski]
+```
+
+## Kodu incelemeye başlayın
+
+- [app.py](app.py)
+- [train_deep_model.py](train_deep_model.py)
+- [train_lgbm.py](train_lgbm.py)
+- [train_optuna_stack.py](train_optuna_stack.py)
+
+## Kapsam ve sınırlar
+
+Saklanan metrikler belirli bir deneyin çıktısıdır; canlı müşteri davranışına genelleme veya nedensel açıklama kanıtı olarak değerlendirilmemelidir.
+
+## Kayıtlı deney sonuçları
+
+[models/metrics.json](models/metrics.json) içindeki değerler aşağıdadır. Modeller bu belge güncellemesi sırasında yeniden eğitilmemiştir; farklı eğitim betiklerinin çıktıları tek bir deney protokolü olarak varsayılmamalıdır.
+
+| Model | Accuracy | Precision | Recall | F1 |
+|---|---:|---:|---:|---:|
+| lightgbm | 80.77% | 68.07% | 51.87% | 58.88% |
+| deep_nn | 79.77% | 64.40% | 53.21% | 58.27% |
+| stack | 80.77% | 67.82% | 52.41% | 59.13% |
+| jupyter_mlp | 74.66% | 51.96% | 60.16% | 55.76% |
+
+Accuracy tek başına yeterli değildir: saklanan stacking sonucu %59,13 F1 ve %52,41 recall içerir. Bu değerler modelin kaçırdığı pozitif örneklerin de değerlendirilmesini gerektirir.
+
 <details>
 <summary><strong>Kurulum, kullanım ve teknik ayrıntılar</strong></summary>
 
