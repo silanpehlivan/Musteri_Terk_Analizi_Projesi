@@ -2,18 +2,33 @@
 
 # Telco Churn Analysis
 
-**Müşteri terk riski analizi**
+### Müşteri verisini anlamlı risk sinyallerine dönüştür.
 
-![Python](https://img.shields.io/badge/Python-2563eb?style=flat-square)
-![Flask](https://img.shields.io/badge/Flask-0891b2?style=flat-square)
-![LightGBM](https://img.shields.io/badge/LightGBM-7c3aed?style=flat-square)
-[![MIT License](https://img.shields.io/badge/License-MIT-16a34a?style=flat-square)](LICENSE)
+![Python](https://img.shields.io/badge/Python-2563eb?style=for-the-badge)
+![Flask](https://img.shields.io/badge/Flask-0891b2?style=for-the-badge)
+![LightGBM](https://img.shields.io/badge/LightGBM-7c3aed?style=for-the-badge)
+[![MIT](https://img.shields.io/badge/MIT-16a34a?style=for-the-badge)](LICENSE)
 
 Telekomünikasyon müşteri verilerinden terk olasılığını tahmin eden, model karşılaştırması ve web paneli içeren makine öğrenmesi projesi.
+
+**Müşteri terk riski analizi**
+
+[Projeyi keşfet](https://github.com/silanpehlivan/Musteri_Terk_Analizi_Projesi/tree/main) · [Kurulum ve ayrıntılar](#projeyi-çalıştırmak-ve-incelemek)
 
 </div>
 
 ---
+
+## İçeride neler var?
+
+- **01** · Optuna ile LightGBM optimizasyonu
+- **02** · MLP ve OOF stacking model yaklaşımı
+- **03** · F1 skoruna göre model seçimi ve risk gösterimi
+
+## Projeyi çalıştırmak ve incelemek
+
+<details>
+<summary><strong>Kurulum, kod yapısı ve teknik notları aç</strong></summary>
 
 ## Öne Çıkanlar
 
@@ -25,7 +40,7 @@ Telekomünikasyon müşteri verilerinden terk olasılığını tahmin eden, mode
 
 Python · Flask · LightGBM · Keras
 
-## Teknik yaklaşım
+### Teknik yaklaşım
 
 Sayısal ölçekleme ve kategorik one-hot dönüşümü sonrası LightGBM ve derin ağ olasılıkları bir meta modele aktarılır. Ayrı eğitim betikleri farklı ensemble yaklaşımlarını incelemeye imkân verir.
 
@@ -37,14 +52,14 @@ C --> D[Meta model]
 D --> E[Terk riski]
 ```
 
-## Kodu incelemeye başlayın
+### Kodu incelemeye başlayın
 
 - [app.py](app.py)
 - [train_deep_model.py](train_deep_model.py)
 - [train_lgbm.py](train_lgbm.py)
 - [train_optuna_stack.py](train_optuna_stack.py)
 
-## Kapsam ve sınırlar
+### Kapsam ve sınırlar
 
 Saklanan metrikler belirli bir deneyin çıktısıdır; canlı müşteri davranışına genelleme veya nedensel açıklama kanıtı olarak değerlendirilmemelidir.
 
@@ -61,8 +76,7 @@ Saklanan metrikler belirli bir deneyin çıktısıdır; canlı müşteri davran�
 
 Accuracy tek başına yeterli değildir: saklanan stacking sonucu %59,13 F1 ve %52,41 recall içerir. Bu değerler modelin kaçırdığı pozitif örneklerin de değerlendirilmesini gerektirir.
 
-<details>
-<summary><strong>Kurulum, kullanım ve teknik ayrıntılar</strong></summary>
+
 
 Telekomünikasyon sektöründe müşteri kaybını minimize etmek için geliştirilmiş, uçtan uca makine öğrenmesi ve interaktif yönetim panelini içeren bir çözümdür. Ham veriden tahmine kadar tüm süreç modüler bir yapıda kurgulanmıştır.
 
@@ -155,6 +169,8 @@ http://127.0.0.1:5000
 - **MLflow Entegrasyonu:** Model deneylerini daha sistematik takip etmek.
 
 - **Dinamik Eşikler:** Risk iştahına göre eşik değerini UI üzerinden ayarlama özelliği.
+
+
 
 
 </details>
