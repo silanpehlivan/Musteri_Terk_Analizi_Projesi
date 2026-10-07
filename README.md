@@ -1,12 +1,40 @@
-# 📊 Telco Müşteri Terk (Churn) Analizi Projesi
+<div align="center">
+
+# Telco Churn Analysis
+
+**Müşteri terk riski analizi**
+
+![Python](https://img.shields.io/badge/Python-2563eb?style=flat-square)
+![Flask](https://img.shields.io/badge/Flask-0891b2?style=flat-square)
+![LightGBM](https://img.shields.io/badge/LightGBM-7c3aed?style=flat-square)
+[![MIT License](https://img.shields.io/badge/License-MIT-16a34a?style=flat-square)](LICENSE)
+
+Telekomünikasyon müşteri verilerinden terk olasılığını tahmin eden, model karşılaştırması ve web paneli içeren makine öğrenmesi projesi.
+
+</div>
+
+---
+
+## Öne Çıkanlar
+
+- Optuna ile LightGBM optimizasyonu
+- MLP ve OOF stacking model yaklaşımı
+- F1 skoruna göre model seçimi ve risk gösterimi
+
+## Teknolojiler
+
+Python · Flask · LightGBM · Keras
+
+<details>
+<summary><strong>Kurulum, kullanım ve teknik ayrıntılar</strong></summary>
 
 Telekomünikasyon sektöründe müşteri kaybını minimize etmek için geliştirilmiş, uçtan uca makine öğrenmesi ve interaktif yönetim panelini içeren bir çözümdür. Ham veriden tahmine kadar tüm süreç modüler bir yapıda kurgulanmıştır.
 
-## 🎯 Projenin Amacı
+## Projenin Amacı
 
 Müşterilerin abonelik iptal etme olasılıklarını önceden tahmin ederek; özel kampanyalar ve indirimler gibi proaktif önlemler alınmasını sağlamaktır.
 
-## 🛠️ Teknik Mimari ve Model Stratejisi
+## Teknik Mimari ve Model Stratejisi
 
 Projede yüksek doğruluk için hibrit bir modelleme yaklaşımı benimsenmiştir:
 
@@ -18,7 +46,7 @@ Projede yüksek doğruluk için hibrit bir modelleme yaklaşımı benimsenmişti
 
 - **SMOTE:** Veri setindeki dengesiz sınıf dağılımını (terk eden müşteriler) yönetmek için kullanılmıştır.
 
-## 💻 Teknoloji Yığını
+## Teknoloji Yığını
 
 ### Backend
 - Python
@@ -37,7 +65,7 @@ Projede yüksek doğruluk için hibrit bir modelleme yaklaşımı benimsenmişti
 - Optuna
 - Joblib
 
-## 📂 Dosya Yapısı
+## Dosya Yapısı
 
 - **app.py:** Model yükleme, API yönetimi ve web arayüzü kontrol merkezi.
 
@@ -47,7 +75,7 @@ Projede yüksek doğruluk için hibrit bir modelleme yaklaşımı benimsenmişti
 
 - **models/metrics.json:** Modellerin başarı kriterlerini (F1, Accuracy vb.) tutan dinamik veri dosyası.
 
-## ⚙️ Karar Mekanizması
+## Karar Mekanizması
 
 - **Girdi:** Kullanıcı verileri arayüz üzerinden girer.
 
@@ -55,7 +83,7 @@ Projede yüksek doğruluk için hibrit bir modelleme yaklaşımı benimsenmişti
 
 - **Tahmin:** Seçilen modelin ürettiği olasılık %60 (0.60) eşiğini aşarsa "Yüksek Terk Riski" uyarısı tetiklenir.
 
-## 🚀 Kurulum ve Çalıştırma
+## Kurulum ve Çalıştırma
 
 ### PowerShell
 
@@ -84,7 +112,7 @@ Tarayıcıda aşağıdaki adres üzerinden panele ulaşabilirsiniz:
 http://127.0.0.1:5000
 ```
 
-## 🔮 Gelecek Yol Haritası
+## Gelecek Yol Haritası
 
 - **Olasılık Kalibrasyonu:** Platt Scaling ile tahmin güvenilirliğini artırmak.
 
@@ -92,10 +120,15 @@ http://127.0.0.1:5000
 
 - **Dinamik Eşikler:** Risk iştahına göre eşik değerini UI üzerinden ayarlama özelliği.
 
-## 📜 Lisans
 
-Bu proje **MIT License** ile lisanslanmıştır. Detaylı bilgi için `LICENSE` dosyasını inceleyebilirsiniz.
+</details>
 
-## 👩‍💻 Geliştirici
+---
 
-Şilan PEHLİVAN
+<div align="center">
+
+**© 2026 Şilan PEHLİVAN**
+
+Bu proje MIT lisansı kapsamında sunulmaktadır. Kullanım ve dağıtım koşulları: [LICENSE](LICENSE).
+
+</div>
